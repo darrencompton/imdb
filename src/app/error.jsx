@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect } from 'react'
 
-export default function errorBox({error, reset}) {
+export default function ErrorBox({error, reset}) {
   useEffect(() => {
     console.log(error)
   
