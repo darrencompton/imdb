@@ -10,7 +10,6 @@ export default async function Home({ searchParams }) {
       ? "discover/movie?include_adult=true&include_video=false&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&"
       : "trending/movie/week?"
   }api_key=${API_KEY}&language=en-us&page=1`;
-  console.log(fetchString);
   const res = await fetch(fetchString, { next: { revalidate: 100 } });
   if (!res.ok) {
     throw new Error("Failed to fetch data");
