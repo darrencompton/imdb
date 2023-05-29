@@ -8,6 +8,7 @@ export default function Results({results}) {
         <div key={result.id}>
 
             {result.original_title}
+            {result.title}
         </div>
       ))}
     </div>
